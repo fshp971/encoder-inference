@@ -1,0 +1,11 @@
+atkdata:
+    - "./results/exp-llava/atk/clip-vit-l14-336/1/atk_gen-data.npz"
+    - "./results/exp-llava/atk/clip-vit-l14-336/2/atk_gen-data.npz"
+    - "./results/exp-llava/atk/clip-vit-l14-336/3/atk_gen-data.npz"
+    - "./results/exp-llava/atk/clip-vit-l14-336/4/atk_gen-data.npz"
+    - "./results/exp-llava/atk/clip-vit-l14-336/5/atk_gen-data.npz"
+    - "./results/exp-llava/atk/clip-vit-l14-336/6/atk_gen-data.npz"
+    - "./results/exp-llava/atk/clip-vit-l14-336/7/atk_gen-data.npz"
+    - "./results/exp-llava/atk/clip-vit-l14-336/8/atk_gen-data.npz"
+    - "./results/exp-llava/atk/clip-vit-l14-336/9/atk_gen-data.npz"
+    - "./results/exp-llava/atk/clip-vit-l14-336/10/atk_gen-data.npz"

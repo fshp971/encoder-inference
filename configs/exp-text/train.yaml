@@ -1,0 +1,19 @@
+# Config file for training downstream classifier
+
+batch_size: 512
+steps: 10000
+eval_freq: 100
+
+optim: adam
+optim_pms:
+    lr: 1.e-3
+    weight_decay: 0
+
+scheduler: step_lr
+scheduler_pms:
+    step_size: 4000
+    gamma: 0.1
+
+classifier: mlp3
+classifier_pms:
+    hidden_dims: 512

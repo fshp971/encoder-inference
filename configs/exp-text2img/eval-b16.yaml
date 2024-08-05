@@ -1,0 +1,24 @@
+eval_num_img: 4
+eval_bs: 10
+
+atkdata:
+    - "./results/exp-text2img/atk/clip-vit-b16/1/atk_gen-data.pkl"
+    - "./results/exp-text2img/atk/clip-vit-b16/2/atk_gen-data.pkl"
+    - "./results/exp-text2img/atk/clip-vit-b16/3/atk_gen-data.pkl"
+    - "./results/exp-text2img/atk/clip-vit-b16/4/atk_gen-data.pkl"
+    - "./results/exp-text2img/atk/clip-vit-b16/5/atk_gen-data.pkl"
+    - "./results/exp-text2img/atk/clip-vit-b16/6/atk_gen-data.pkl"
+    - "./results/exp-text2img/atk/clip-vit-b16/7/atk_gen-data.pkl"
+    - "./results/exp-text2img/atk/clip-vit-b16/8/atk_gen-data.pkl"
+    - "./results/exp-text2img/atk/clip-vit-b16/9/atk_gen-data.pkl"
+    - "./results/exp-text2img/atk/clip-vit-b16/10/atk_gen-data.pkl"
+    - "./results/exp-text2img/atk/clip-vit-b16/11/atk_gen-data.pkl"
+    - "./results/exp-text2img/atk/clip-vit-b16/12/atk_gen-data.pkl"
+    - "./results/exp-text2img/atk/clip-vit-b16/13/atk_gen-data.pkl"
+    - "./results/exp-text2img/atk/clip-vit-b16/14/atk_gen-data.pkl"
+    - "./results/exp-text2img/atk/clip-vit-b16/15/atk_gen-data.pkl"
+    - "./results/exp-text2img/atk/clip-vit-b16/16/atk_gen-data.pkl"
+    - "./results/exp-text2img/atk/clip-vit-b16/17/atk_gen-data.pkl"
+    - "./results/exp-text2img/atk/clip-vit-b16/18/atk_gen-data.pkl"
+    - "./results/exp-text2img/atk/clip-vit-b16/19/atk_gen-data.pkl"
+    - "./results/exp-text2img/atk/clip-vit-b16/20/atk_gen-data.pkl"

@@ -1,0 +1,15 @@
+# Config file for generating atk data for image encoder inference
+
+atker_pms:
+    steps: 200
+    scheduler: step_lr
+    scheduler_pms:
+        init_lr: 0.1
+        step_size: 100
+        gamma: 1
+    img_size: 64
+    gd_est_eps: 5
+    gd_est_num: 100
+
+gen_num: 20
+query_bs: 2000

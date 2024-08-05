@@ -1,0 +1,11 @@
+atkdata:
+    - "./results/exp-img/atk/rn50-hf/1/atk_gen-data.npz"
+    - "./results/exp-img/atk/rn50-hf/2/atk_gen-data.npz"
+    - "./results/exp-img/atk/rn50-hf/3/atk_gen-data.npz"
+    - "./results/exp-img/atk/rn50-hf/4/atk_gen-data.npz"
+    - "./results/exp-img/atk/rn50-hf/5/atk_gen-data.npz"
+    - "./results/exp-img/atk/rn50-hf/6/atk_gen-data.npz"
+    - "./results/exp-img/atk/rn50-hf/7/atk_gen-data.npz"
+    - "./results/exp-img/atk/rn50-hf/8/atk_gen-data.npz"
+    - "./results/exp-img/atk/rn50-hf/9/atk_gen-data.npz"
+    - "./results/exp-img/atk/rn50-hf/10/atk_gen-data.npz"
