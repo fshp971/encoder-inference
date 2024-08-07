@@ -1,6 +1,10 @@
 # Pre-trained Encoder Inference: Revealing Upstream Encoders In Downstream Machine Learning Services
 
-This is the official repository for the preprint "Pre-trained Encoder Inference: Revealing Upstream Encoders In Downstream Machine Learning Services" by Shaopeng Fu, Xuexue Sun, Ke Qing, Tianhang Zheng, and Di Wang.
+This is the official repository for the preprint ["Pre-trained Encoder Inference: Revealing Upstream Encoders In Downstream Machine Learning Services"](https://www.arxiv.org/abs/2408.02814) by Shaopeng Fu, Xuexue Sun, Ke Qing, Tianhang Zheng, and Di Wang.
+
+## News
+
+- 08/2024: The paper was released on [arXiv](https://www.arxiv.org/abs/2408.02814).
 
 ## Installation
 
@@ -48,4 +52,11 @@ Tutorials of running different experiments are collected in folder [./tutorials]
 
 ## Citation
 
-Coming soon...
+```
+@article{fu2024pre,
+  title={Pre-trained Encoder Inference: Revealing Upstream Encoders In Downstream Machine Learning Services},
+  author={Shaopeng Fu and Xuexue Sun and Ke Qing and Tianhang Zheng and Di Wang},
+  journal={arXiv preprint arXiv:2408.02814},
+  year={2024}
+}
+```
