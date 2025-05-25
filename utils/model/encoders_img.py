@@ -111,30 +111,37 @@ def rn50_ms(device: str, pooling: bool):
 
 
 def clip_vit_l14(device: str, pooling: bool):
-    return _build_clip("openai/clip-vit-large-patch14", 768, device, pooling)
+    # return _build_clip("openai/clip-vit-large-patch14", 768, device, pooling)
+    return _build_clip("openai/clip-vit-large-patch14", 1024, device, pooling)
 
 
 def clip_vit_l14_336(device: str, pooling: bool):
-    return _build_clip("openai/clip-vit-large-patch14-336", 768, device, pooling)
+    # return _build_clip("openai/clip-vit-large-patch14-336", 768, device, pooling)
+    return _build_clip("openai/clip-vit-large-patch14-336", 1024, device, pooling)
 
 
 def clip_vit_b16(device: str, pooling: bool):
-    return _build_clip("openai/clip-vit-base-patch16", 512, device, pooling)
+    # return _build_clip("openai/clip-vit-base-patch16", 512, device, pooling)
+    return _build_clip("openai/clip-vit-base-patch16", 768, device, pooling)
 
 
 def clip_vit_b32(device: str, pooling: bool):
-    return _build_clip("openai/clip-vit-base-patch32", 512, device, pooling)
+    # return _build_clip("openai/clip-vit-base-patch32", 512, device, pooling)
+    return _build_clip("openai/clip-vit-base-patch32", 768, device, pooling)
 
 def openclip_vit_b32(device: str, pooling: bool):
-    return _build_clip("laion/CLIP-ViT-B-32-laion2B-s34B-b79K", 512, device, pooling)
+    # return _build_clip("laion/CLIP-ViT-B-32-laion2B-s34B-b79K", 512, device, pooling)
+    return _build_clip("laion/CLIP-ViT-B-32-laion2B-s34B-b79K", 768, device, pooling)
 
 
 def openclip_vit_l14(device: str, pooling: bool):
-    return _build_clip("laion/CLIP-ViT-L-14-laion2B-s32B-b82K", 768, device, pooling)
+    # return _build_clip("laion/CLIP-ViT-L-14-laion2B-s32B-b82K", 768, device, pooling)
+    return _build_clip("laion/CLIP-ViT-L-14-laion2B-s32B-b82K", 1024, device, pooling)
 
 
 def openclip_vit_h14(device: str, pooling: bool):
-    return _build_clip("laion/CLIP-ViT-H-14-laion2B-s32B-b79K", 1024, device, pooling)
+    # return _build_clip("laion/CLIP-ViT-H-14-laion2B-s32B-b79K", 1024, device, pooling)
+    return _build_clip("laion/CLIP-ViT-H-14-laion2B-s32B-b79K", 1280, device, pooling)
 
 
 __model_zoo__ = {

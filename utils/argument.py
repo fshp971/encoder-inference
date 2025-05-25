@@ -11,8 +11,6 @@ def add_shared_args(parser):
     parser.add_argument("--save-name", type=str, default="temp-name",
                         help="set the save name of the experiment result")
     parser.add_argument("--exp-config", type=str, default=None)
-    parser.add_argument("--exp-type", type=str, default=None,
-                        choices=["embed", "train", "atk", "eval", "furatk", "eval-furatk"])
     parser.add_argument("--cpu-eval", action="store_true")
 
 
@@ -34,8 +32,7 @@ def add_img_exp_args(parser):
     parser.add_argument("--encoder", type=str, default=None,
                         choices=["rn34-hf", "rn50-hf", "mobilenetv3-hf", "rn34-ms", "rn50-ms",
                                  "clip-vit-l14", "clip-vit-l14-336", "clip-vit-b16", "clip-vit-b32",
-                                 "openclip-vit-b32", "openclip-vit-l14", "openclip-vit-h14"],
-                        help="set the pre-trained encoder")
+                                 "openclip-vit-b32", "openclip-vit-l14", "openclip-vit-h14"])
 
     parser.add_argument("--dataset", type=str, default=None,
                         choices=["cifar10", "cifar100", "svhn", "stl10", "food101"])
@@ -44,7 +41,33 @@ def add_img_exp_args(parser):
 
     parser.add_argument("--jpeg-def", action="store_true")
     parser.add_argument("--resize-atk", type=int, default=None)
+    parser.add_argument("--exp-type", type=str, default=None,
+                        choices=["embed", "train", "atk", "eval"])
 
+
+def add_img_steal_exp_args(parser):
+    assert isinstance(parser, argparse.ArgumentParser)
+
+    parser.add_argument("--encoder", type=str, default=None,
+                        choices=["rn34-hf", "rn50-hf", "mobilenetv3-hf", "rn34-ms", "rn50-ms",
+                                 "clip-vit-l14", "clip-vit-l14-336", "clip-vit-b16", "clip-vit-b32",
+                                 "openclip-vit-b32", "openclip-vit-l14", "openclip-vit-h14"])
+
+    parser.add_argument("--inferred-encoder", type=str, default=None,
+                        choices=["rn34-hf", "rn50-hf", "mobilenetv3-hf", "rn34-ms", "rn50-ms",
+                                 "clip-vit-l14", "clip-vit-l14-336", "clip-vit-b16", "clip-vit-b32",
+                                 "openclip-vit-b32", "openclip-vit-l14", "openclip-vit-h14"],)
+
+    parser.add_argument("--dataset", type=str, default=None,
+                        choices=["cifar10", "cifar100", "svhn", "stl10", "food101"])
+    parser.add_argument("--surrogate-ds-size", type=int, default=None)
+
+    parser.add_argument("--steal-npz-data-path", type=str, default=None)
+    parser.add_argument("--inferred-trainset-path", type=str, default=None)
+    parser.add_argument("--inferred-testset-path", type=str, default=None)
+
+    parser.add_argument("--pei-assist", action="store_true")
+    parser.add_argument("--steal-type", type=str, default=None, choices=["logit-label", "hard-label"])
 
 
 def add_text_exp_args(parser):
@@ -60,6 +83,8 @@ def add_text_exp_args(parser):
     parser.add_argument("--atkdata-path", type=str, default=None)
 
     parser.add_argument("--def-flip-rate", type=float, default=None)
+    parser.add_argument("--exp-type", type=str, default=None,
+                        choices=["embed", "train", "atk", "eval"])
 
 
 def add_img2text_exp_args(parser):
@@ -74,6 +99,9 @@ def add_img2text_exp_args(parser):
     parser.add_argument("--further-atk-img", type=str, default=None)
     parser.add_argument("--further-atk-img-num", type=int, default=1)
     parser.add_argument("--eval-imgs", type=str, default=None)
+
+    parser.add_argument("--exp-type", type=str, default=None,
+                        choices=["atk", "eval", "furatk", "eval-furatk"])
 
     # parser.add_argument("--jpeg-def", action="store_true")
     # parser.add_argument("--resize-atk", type=int, default=None)
@@ -95,3 +123,6 @@ def add_text2img_exp_args(parser):
     parser.add_argument("--atkdata-path", type=str, default=None)
 
     parser.add_argument("--def-flip-rate", type=float, default=None)
+
+    parser.add_argument("--exp-type", type=str, default=None,
+                        choices=["atk", "eval"])

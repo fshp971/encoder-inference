@@ -1,6 +1,7 @@
 from .argument import (
     add_shared_args,
     add_img_exp_args,
+    add_img_steal_exp_args,
     add_text_exp_args,
     add_cls_task_args,
     add_text2img_exp_args,

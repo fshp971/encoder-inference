@@ -1,7 +1,7 @@
 # Config file for generating atk data for image encoder inference
 
 atker_pms:
-    steps: 200
+    steps: 100
     scheduler: step_lr
     scheduler_pms:
         init_lr: 0.1
@@ -11,5 +11,5 @@ atker_pms:
     gd_est_eps: 5
     gd_est_num: 100
 
-gen_num: 20
-query_bs: 2000
+gen_num: 5
+query_bs: 1000

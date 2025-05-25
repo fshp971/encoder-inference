@@ -77,7 +77,8 @@ class ImgAtkZeroth:
             for i in range(gen_num):
                 st = i * len(noise)
                 ed = st + len(noise)
-                inp_cache[st : ed] = self._internal_trans_inv(xs[i].unsqueeze(0) + noi_eps) # shape: [B, C, W, H]
+                tmp_imgs = xs[i].unsqueeze(0) + noi_eps
+                inp_cache[st : ed] = self._internal_trans_inv(tmp_imgs) # shape: [B, C, W, H]
             for i in range(0, len(loss), query_bs):
                 ed = min(len(loss), i+query_bs)
                 loss[i:ed] += ((encoder(inp_cache[i:ed]).to(device) - target) ** 2).view(ed-i, -1).mean(dim=-1)
@@ -85,7 +86,8 @@ class ImgAtkZeroth:
             for i in range(gen_num):
                 st = i * len(noise)
                 ed = st + len(noise)
-                inp_cache[st : ed] = self._internal_trans_inv(xs[i].unsqueeze(0) - noi_eps) # shape: [B, C, W, H]
+                tmp_imgs = xs[i].unsqueeze(0) - noi_eps
+                inp_cache[st : ed] = self._internal_trans_inv(tmp_imgs) # shape: [B, C, W, H]
             for i in range(0, len(loss), query_bs):
                 ed = min(len(loss), i+query_bs)
                 loss[i:ed] -= ((encoder(inp_cache[i:ed]).to(device) - target) ** 2).view(ed-i, -1).mean(dim=-1)

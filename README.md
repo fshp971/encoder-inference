@@ -4,7 +4,8 @@ This is the official repository for the preprint ["Pre-trained Encoder Inference
 
 ## News
 
-- 08/2024: The paper was released on [arXiv](https://www.arxiv.org/abs/2408.02814).
+- 05/2025: An update version of the paper was released on [arXiv](https://www.arxiv.org/abs/2408.02814).
+- 08/2024: The paper was released on [arXiv](https://www.arxiv.org/abs/2408.02814v1).
 
 ## Installation
 
@@ -25,7 +26,7 @@ conda activate encoder-inference
 
 # install packages
 conda install pytorch=2.4.0 torchvision=0.19.0 pytorch-cuda=11.8 -c pytorch -c nvidia
-pip install --upgrade transformers==4.41.2 diffusers==0.28.2 timm==1.0.7 accelerate==0.32.0 datasets==2.20.0 scipy==1.14.0 bitsandbytes==0.43.1
+pip install --upgrade huggingface_hub==0.24.5 transformers==4.41.2 diffusers==0.28.2 timm==1.0.7 accelerate==0.32.0 datasets==2.20.0 scipy==1.14.0 bitsandbytes==0.43.1
 ```
 
 ### Build environment via Docker
@@ -46,8 +47,6 @@ Example scripts and configurations are collected in folders [./scripts](./script
 Tutorials of running different experiments are collected in folder [./tutorials](./tutorials). They are:
 
 - **PEI Attack vs Image Classification Services:** [tutorials/exp-img.md](./tutorials/exp-img.md).
-- **PEI Attack vs Text Classification Services:** [tutorials/exp-text.md](tutorials/exp-text.md).
-- **PEI Attack vs Text-to-image Services:** [tutorials/exp-text2img.md](tutorials/exp-text2img.md).
 - **PEI-assisted Adversarial Attack vs LLaVA:** [tutorials/exp-llava.md](tutorials/exp-llava.md).
 
 ## Citation
@@ -56,7 +55,6 @@ Tutorials of running different experiments are collected in folder [./tutorials]
 @article{fu2024pre,
   title={Pre-trained Encoder Inference: Revealing Upstream Encoders In Downstream Machine Learning Services},
   author={Shaopeng Fu and Xuexue Sun and Ke Qing and Tianhang Zheng and Di Wang},
-  journal={arXiv preprint arXiv:2408.02814},
+  journal={arXiv preprint arXiv:2408.02814v2},
   year={2024}
 }
-```

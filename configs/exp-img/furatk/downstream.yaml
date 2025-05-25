@@ -1,0 +1,18 @@
+batch_size: 64
+steps: 10000
+eval_freq: 1000
+
+optim: adam
+optim_pms:
+    lr: 1.e-3
+    weight_decay: 0
+
+scheduler: step_lr
+scheduler_pms:
+    step_size: 2000
+    # gamma: 0.1
+    gamma: 1
+
+steal_model: mlp3
+steal_model_pms:
+    hidden_dims: 512

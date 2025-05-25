@@ -12,7 +12,7 @@ else:
 
 class EmbedDataset:
     @staticmethod
-    def build(dataset, encoder: Callable, cache_batch: int = 1000) -> "EmbeddingDataset":
+    def build(dataset, encoder: Callable, cache_batch: int = 1000) -> "EmbedDataset":
         embed_x, y = [], []
 
         for i in range(0, len(dataset), cache_batch):
@@ -27,7 +27,7 @@ class EmbedDataset:
         embed_x = torch.cat(embed_x)
         y = torch.tensor(y)
 
-        return EmbeddingDataset(embed_x, y, dataset)
+        return EmbedDataset(embed_x, y, dataset)
 
     def __init__(self, embed_x, y, dataset):
         self.embed_x = embed_x
